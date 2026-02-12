@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA Guide | Vendor ASN Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portal Home</a>
+
+        <div class="content-card">
+            <h2>🤖 Robotic Process Automation (RPA)</h2>
+            <p style="margin-bottom: 2rem;">RPA is an automated system designed to process high-volume shipment data via
+                Excel. It streamlines ASN creation by validating your data against our warehouse requirements
+                automatically.</p>
+
+            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">1. Prepare the RPA Excel File</h3>
+            <p>Ensure the following mandatory fields are correctly populated in the template:</p>
+
+            <div class="field-grid">
+                <div class="field-item">Sequence</div>
+                <div class="field-item">PO Number</div>
+                <div class="field-item">Invoice & Date</div>
+                <div class="field-item">Barcode / SKU</div>
+                <div class="field-item">Quantity</div>
+                <div class="field-item">Unit & Total Price</div>
+                <div class="field-item">Currency</div>
+                <div class="field-item">Log ID</div>
+                <div class="field-item">Expected Weight</div>
+                <div class="field-item">INCO Terms</div>
+                <div class="field-item">Country Origin/Destination</div>
+                <div class="field-item">Mode of Transport</div>
+            </div>
+
+            <div class="info-note">
+                <strong>Formatting Rules:</strong>
+                <ul style="margin-top: 0.5rem; list-style: disc; padding-left: 1.5rem;">
+                    <li><strong>Sequence:</strong> The first column must be a sequence (1, 2, 3...). Drag the sequence
+                        down to match the total number of lines in your file.</li>
+                    <li><strong>Invoice Date:</strong> Must use the format <code>MM/DD/YYYY 00:00:00</code> (e.g.,
+                        <strong>02/12/2026 00:00:00</strong>).
+                    </li>
+                    <li><strong>Packaging Units:</strong> Put Number of Cartons in <strong>UDF 4</strong> and Number of
+                        Pallets in <strong>UDF 5</strong>.</li>
+                </ul>
+            </div>
+
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">File Naming Convention</span>
+                    Save your completed file with the exact format: <br>
+                    <code style="background: #eee; padding: 2px 5px;">ASN_RPA_001_(Date)_(LOG ID)</code>
+                    <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 0.25rem;">(Note: Increase "001"
+                        sequence based on the number of times you've pushed this file through the input folder)</p>
+                </li>
+                <li>
+                    <span class="step-title">Submission</span>
+                    Place the file into the designated <strong>Input Folder</strong>. The system will begin processing
+                    automatically.
+                </li>
+                <li>
+                    <span class="step-title">Analysis Period</span>
+                    Wait approximately <strong>5-10 minutes</strong> for the RPA bot to complete the data analysis.
+                </li>
+                <li>
+                    <span class="step-title">Check Results</span>
+                    <ul style="margin: 1rem 0 0 1rem; list-style: circle;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Validation Complete:</strong> If no errors were
+                            found, the file will move here. Your ASN is now being transmitted.
+                            <span
+                                style="display: block; margin-top: 0.5rem; font-style: italic; font-size: 0.9rem; color: var(--text-dark);">
+                                You can find your transmitted ASN by visiting the respective warehouse system
+                                (<strong>WM9</strong> or <strong>SCE11</strong>) and pasting your <strong>LOG
+                                    ID</strong> into the <strong>Remarks</strong> section of the ASN tab.
+                            </span>
+                        </li>
+                        <li><strong>Error File:</strong> If issues are identified, the file will move here. Open it to
+                            see the system-generated error description.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="info-note" style="background-color: #f0fdf4; border-color: #22c55e; color: #166534;">
+                <strong>Next Step:</strong> If a file ends up in the "Error" section, you must amend the issues
+                identified in the log, update the file, and rerun it through the Input Folder.
+            </div>
+
+            <div class="button-group">
+                <a href="ASN_RPA_TEMPLATE_(DATE)_(LOGID) (1).xlsx" class="cta-button" download>Download RPA Template</a>
+                <a href="ASN_ERROR_CODE_Mapping (1).xlsx" class="cta-button" download>Download RPA Error
+                    Explanations</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASN Portal Guide (DIP & MFC) | Vendor ASN Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portal Home</a>
+
+        <div class="content-card">
+            <h2>💻 ASN Portal (DIP & MFC Only)</h2>
+            <p style="margin-bottom: 2rem;">Follow these detailed steps for creating ASNs bound for DIP (Dubai) and MFC
+                (Riyadh) warehouses.</p>
+
+            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">1. Pre-Processing & Validation (RMS/Oracle)
+            </h3>
+            <p>Before touching the portal, get the PO number from Logitude and enter it into <strong>RMS/Oracle</strong>
+                to conduct these checks:</p>
+
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Status Check</span>
+                    Ensure the PO is in <strong>Approved</strong> status. If not, stop and email the BU to request
+                    approval.
+                </li>
+                <li>
+                    <span class="step-title">Location Validation</span>
+                    Verify if the PO is for a <strong>Warehouse Location</strong>. Store locations do NOT require ASNs.
+                    If you only see store locations, inform the BU for guidance.
+                </li>
+                <li>
+                    <span class="step-title">Intercompany vs. Manual</span>
+                    Determine the PO type:
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem; list-style: disc;">
+                        <li><strong>Intercompany / Inter-DSO:</strong> Process directly in <strong>SCE11</strong>. Paste
+                            the PO between two percent signs (e.g., <code>%PO%</code>) in the <em>External Receipt</em>
+                            section of the ASN tab.</li>
+                        <li><strong>Manual:</strong> Proceed with the ASN Portal steps below.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">2. Initial Portal Setup</h3>
+            <div class="has-image" style="align-items: flex-start; margin-bottom: 2rem;">
+                <div class="info-note" style="margin: 0; flex: 1;">
+                    <strong>RMS Data Reference:</strong> Most of the header information required in the portal is
+                    sourced directly from RMS. Ensure you have the <strong>Supplier Site Number</strong> and
+                    <strong>Location Number</strong> ready as highlighted in the reference image.
+                </div>
+                <div class="step-image" tabindex="0" style="flex: 0 0 350px;">
+                    <img src="RMS.jpg" alt="RMS Data Reference Screenshot">
+                </div>
+            </div>
+
+            <ul class="step-list">
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">Facility & Location</span>
+                        Select the facility: <strong>DIP</strong> (Dubai) or <strong>MFC</strong> (Riyadh).
+                        <br>Click "Pick a Location", use <code>Ctrl + F</code> to search for the location number from
+                        RMS (Reference image above).
+                        <strong>Note:</strong> Remove the last three digits of the RMS location number to find the
+                        correct match in the portal dropdown.
+                    </div>
+                    <div class="step-image" tabindex="0">
+                        <img src="LOC.jpg" alt="Location Search Reference">
+                    </div>
+                </li>
+                <li>
+                    <span class="step-title">Supplier Search</span>
+                    Paste the <strong>Supplier Site Number</strong> (from RMS reference above) into the "Search by First
+                    Name" section of the portal.
+                </li>
+                <li>
+                    <span class="step-title">Headers & Logistics</span>
+                    Fill out the following mandatory fields:
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem; list-style: disc;">
+                        <li><strong>Weight & Volume:</strong> Expected Weight and NO. of Cartons/Pallets.</li>
+                        <li><strong>ASN Type:</strong> Select <code>5000 - Normal</code>.</li>
+                        <li><strong>Logistics Details:</strong> Traffic File Number (LOG ID), Transportation Mode,
+                            Delivery Terms, Country of Origin, and Port of Loading (Source City).</li>
+                        <li><strong>Destination:</strong> Country of Destination and Port of Discharge (Arrival City).
+                        </li>
+                    </ul>
+                    <p style="margin-top: 0.5rem;">Click <strong>Save</strong> once complete.</p>
+                </li>
+            </ul>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">3. Invoices & PO Selection</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Supplier Invoice Tab</span>
+                    Navigate to the top tab. Add the Invoice Number, Date, and Value. Click <strong>"Add
+                        Invoice"</strong> as many times as necessary for multi-invoice shipments.
+                </li>
+                <li>
+                    <span class="step-title">PO Selection Tab</span>
+                    Add the PO numbers and link them to their respective invoices.
+                    <div class="info-note"
+                        style="background-color: #fee2e2; border-left-color: #ef4444; color: #991b1b; padding: 0.5rem 1rem; margin-top: 0.5rem;">
+                        <strong>Incident Alert:</strong> If a PO is not reflecting or showing up, <a
+                            href="incident.html" style="font-weight: 600; color: #991b1b;">Raise an Incident here</a>.
+                    </div>
+                </li>
+            </ul>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">4. Item Selection (The "Detail" Level)</h3>
+            <p>Choose your processing method based on your shipment volume:</p>
+
+            <div class="field-grid" style="grid-template-columns: 1fr; gap: 2rem;">
+                <div style="background: white; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 4px;">
+                    <strong style="color: var(--primary-blue); display: block; margin-bottom: 0.5rem;">Option A:
+                        RPA-Validated Route (Recommended)</strong>
+                    <ol style="font-size: 0.9rem; padding-left: 1.2rem;">
+                        <li>Copy the PO, INV, QTY, FULL Price, SKU, and Description from the validated RPA file.</li>
+                        <li>Perform a <strong>Pivot Table</strong> in Excel to stop duplicate SKUs.</li>
+                        <li><strong>Order:</strong> PO > SKU > Description > QTY > Unit Price > Invoice.</li>
+                        <li><strong>Note:</strong> Calculate Unit Price by dividing Total Price by Quantity after the
+                            pivot.</li>
+                        <li>Portal -> Details -> Save Changes -> Import -> Paste -> Confirm.</li>
+                    </ol>
+                </div>
+
+                <div style="background: white; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 4px;">
+                    <strong style="color: var(--primary-blue); display: block; margin-bottom: 0.5rem;">Option B: Manual
+                        Selection</strong>
+                    <ol style="font-size: 0.9rem; padding-left: 1.2rem;">
+                        <li>PO Item Selection -> Choose POs -> "Get Items".</li>
+                        <li>Export to Excel to cross-check quantities and values against the invoice SKUs.</li>
+                        <li>Paste your finalized invoice numbers.</li>
+                        <li>Portal -> Details -> Save Changes -> Import -> Paste -> Confirm.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="info-note" style="background-color: #fffbeb; border-left-color: #f59e0b; color: #92400e;">
+                <strong>🚨 System Glitch Alert:</strong> After importing items and saving, the <em>Country of
+                    Destination</em> and <em>Delivery Terms</em> might reset. Check them one last time before clicking
+                <strong>Confirm</strong>.
+            </div>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">5. Finalization</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Generation Time</span>
+                    It takes approximately <strong>5-10 minutes</strong> to generate the ASN after confirmation.
+                </li>
+                <li>
+                    <span class="step-title">Appointments</span>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem; list-style: circle;">
+                        <li><strong>DIP:</strong> You can start creating the appointment while the ASN is generating.
+                        </li>
+                        <li><strong>MFC:</strong> No appointment is required.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="info-note" style="background-color: #f0f9ff; border-left-color: #0ea5e9; color: #0369a1;">
+                <strong>💡 Note on Invoices:</strong> Both DIP and MFC allow multiple invoices per ASN unless
+                specifically requested otherwise by the BU.
+                <br><br>
+                <strong>📍 Carton-Level ASN:</strong> Some DIP shipments require one ASN per carton. This will be
+                specified in the SAF sheet or via email.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
+

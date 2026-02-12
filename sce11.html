@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCE11 Guide | Vendor ASN Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portal Home</a>
+
+        <div class="content-card">
+            <h2>Creating An ASN In SCE11</h2>
+            <p style="margin-bottom: 2rem;">Use this legacy system for international freight and hard-goods
+                (furniture/fixtures).</p>
+
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Intercompany / Inter-DSO Processing</span>
+                    For <strong>Intercompany</strong> or <strong>Inter-DSO</strong> PO types, follow this logic:
+                    <ul style="margin: 0.5rem 0 0 1.5rem; list-style: disc; font-size: 0.9rem;">
+                        <li>Navigate to the respective Warehouse location.</li>
+                        <li>Go to the <strong>ASN Tab</strong>.</li>
+                        <li>Paste the PO number between two percent signs (e.g., <code>%123456%</code>) in the
+                            <strong>External Receipt</strong> section.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="step-title">Access the Gateway (Manual Entries)</span>
+                    For manual international freight, select "New Transaction" and choose "856 - Ship Notice / Manifest"
+                    from the dropdown.
+                </li>
+                <li>
+                    <span class="step-title">Header Information</span>
+                    Fill in the Bill of Lading (BOL) number and the Ship-To Location code (e.g., WH-01).
+                </li>
+                <li>
+                    <span class="step-title">Itemization</span>
+                    Upload the CSV template with SKU counts. Ensure there are no discrepancies between the PO and the
+                    physical shipment.
+                </li>
+                <li>
+                    <span class="step-title">Finalize & Transmit</span>
+                    Click "Validate" to check for errors. If green, click "Transmit" to send the data to our Warehouse
+                    Management System (WMS).
+                </li>
+            </ul>
+            <a href="#" class="cta-button">Access SCE11 Login</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
+

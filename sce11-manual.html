@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCE11 Manual ASN Guide | Vendor ASN Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portal Home</a>
+
+        <div class="content-card">
+            <h2>🚢 Manual ASN Creation in SCE11</h2>
+            <p style="margin-bottom: 2rem;">Follow these steps to manually create an Advanced Shipping Notice within the
+                SCE11 system for international freight and hard-goods.</p>
+
+            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">1. System Entry & Header</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Database Selection</span>
+                    Start by entering the correct Warehouse (WH) database: either <strong>DIP</strong> or
+                    <strong>MFC</strong>.
+                </li>
+                <li>
+                    <span class="step-title">Navigation</span>
+                    Click on the <strong>Inbound</strong> drop-down menu and select <strong>ASN/Receipt</strong>.
+                </li>
+                <li>
+                    <span class="step-title">Initialize Record</span>
+                    Once in the section, click <strong>New</strong> to start a new entry.
+                </li>
+                <li>
+                    <span class="step-title">Initial Section (Main Tab)</span>
+                    Fill out the following primary details:
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem; list-style: disc;">
+                        <li><strong>Owner Code:</strong> Enter the Owner Code (retrieved from the PO section as
+                            previously described).</li>
+                        <li><strong>Documents Received Date:</strong> Set this to today's date.</li>
+                        <li><strong>PO Number:</strong> Paste your PO number into the designated section.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">2. Detailed Configuration</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">General Tab</span>
+                    Navigate to the <strong>General Tab</strong> and paste the invoice number under the <strong>Supplier
+                        Invoice Number</strong> field.
+                </li>
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">Load Tab</span>
+                        Enter the following logistics details:
+                        <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem; list-style: circle;">
+                            <li>Traffic File Number (LOG ID)</li>
+                            <li>Transportation Mode</li>
+                            <li>Terms of Delivery</li>
+                            <li>Country of Origin & Destination</li>
+                        </ul>
+                    </div>
+                    <div class="step-image" tabindex="0">
+                        <img src="load.jpg" alt="Load Tab Logistics Reference">
+                    </div>
+                </li>
+                <li>
+                    <span class="step-title">User Defined Tab (UDF)</span>
+                    Fill out the remaining financial and physical data:
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem; list-style: disc;">
+                        <li>Supplier Invoice Date</li>
+                        <li>Total Invoice Value & Total ASN Value</li>
+                        <li>Number of Cases / Or Pallets</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="info-note"
+                style="background-color: #f0fdf4; border-left-color: #22c55e; color: #166534; margin-top: 2rem;">
+                <strong>✅ Final Step:</strong> Click <strong>Save</strong> from the top bar. You have now successfully
+                created an ASN manually in SCE11.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
+

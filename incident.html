@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logging An Incident | ASN Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portal Home</a>
+
+        <div class="content-card">
+            <h2>⚠️ Logging An Incident</h2>
+            <p style="margin-bottom: 2rem;">If a Purchase Order (PO) is not reflecting in the system or you encounter
+                technical issues, follow these steps to report the incident via One Reach.</p>
+
+            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">1. Access One Reach</h3>
+            <p style="margin-bottom: 1.5rem;">Begin by logging into the One Reach support portal.</p>
+            <a href="https://onereach.chalhoub.com/support/catalog/items?popular=true" class="cta-button"
+                target="_blank" style="margin-bottom: 2rem;">Go to One Reach Support</a>
+
+            <div class="step-list" style="margin-top: 2rem;">
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">Initiate Report</span>
+                        Click on <strong>"New"</strong> and then select <strong>"Report an Issue"</strong> from the
+                        menu.
+                    </div>
+                    <div class="step-image" tabindex="0">
+                        <img src="INCI.jpg" alt="Reporting an Issue UI">
+                    </div>
+                </li>
+
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">General Information</span>
+                        Fill out the basic details including:
+                        <ul style="margin: 0.5rem 0 0 1.5rem; list-style: disc; font-size: 0.9rem;">
+                            <li><strong>Brand:</strong> Select your respective brand.</li>
+                            <li><strong>Function Location:</strong> Should always be <strong>Warehouse</strong>.</li>
+                            <li><strong>Warehouse Location:</strong> Select the relevant warehouse.</li>
+                        </ul>
+                    </div>
+                    <div class="step-image" tabindex="0">
+                        <img src="INCI2.jpg" alt="Ticket Fields Reference">
+                    </div>
+                </li>
+
+                <li>
+                    <span class="step-title">Categorization (Critical)</span>
+                    To ensure your ticket reaches the correct team, use these exact settings:
+                    <ul style="margin: 0.5rem 0 0 1.5rem; list-style: circle; font-size: 0.9rem;">
+                        <li><strong>Category:</strong> Warehouse Management System</li>
+                        <li><strong>Sub-Category:</strong> ASN / Inbound</li>
+                        <li><em>Note: If this is a <strong>Sephora</strong> incident, the sub-category must be
+                                <strong>3PL Issues</strong>.</em></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="step-content" style="margin-bottom: 1rem;">
+                        <span class="step-title">Subject & Description</span>
+                        The subject should clearly state the issue.
+                        <br><strong>Example:</strong>
+                        <span
+                            style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: 500; color: var(--primary-blue);">PO
+                            123456 is not reflecting in WM9 / SCE11 / ASN Portal</span>
+                        <p style="margin-top: 0.5rem;">Copy this same text into the <strong>Description</strong> section
+                            before submitting.</p>
+                    </div>
+
+                    <div class="has-image" style="align-items: center;">
+                        <div class="info-note"
+                            style="background-color: #f0f9ff; border-left-color: #0ea5e9; color: #0369a1; margin: 0; flex: 1;">
+                            <strong>Pro Tip:</strong> Add the BU to the ticket while creating it by clicking the
+                            <strong>"Add CC"</strong> button so they can track progress.
+                        </div>
+                        <div class="step-image" tabindex="0" style="flex: 0 0 250px;">
+                            <img src="ADDCC.jpg" alt="Add CC Button">
+                        </div>
+                    </div>
+                </li>
+            </div>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">2. Post-Submission Actions</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Retrieve Incident Number</span>
+                    Once submitted, scroll to the top of the page to find your Incident Number (e.g.,
+                    <strong>#INC-1883087</strong>).
+                </li>
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">Forgotten CC?</span>
+                        If you forgot to add the BU during creation, you can scroll to the top of the submitted incident
+                        and click <strong>"Add People"</strong>.
+                    </div>
+                    <div class="step-image" tabindex="0">
+                        <img src="ADDPPL.jpg" alt="Add People Button">
+                    </div>
+                </li>
+                <li>
+                    <span class="step-title">Communication</span>
+                    Send an email to the respective BU informing them of the issue and include the Incident Number for
+                    their reference.
+                </li>
+            </ul>
+
+            <div class="info-note"
+                style="background-color: #fff7ed; border-left-color: #f97316; color: #9a3412; margin-top: 2rem;">
+                <strong>💡 Final Requirement:</strong> Continuous follow-up with the IT team is essential. Ensure the
+                incident is resolved and the PO is confirmed so the warehouse can physically receive the items.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
+

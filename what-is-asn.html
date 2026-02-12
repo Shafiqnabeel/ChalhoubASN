@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is an ASN? | Vendor ASN Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portal Home</a>
+
+        <div class="content-card">
+            <h2>🔍 What Is An ASN?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;">An <strong>Advanced Shipping Notice (ASN)</strong> is a
+                critical electronic document that provides detailed information about a pending delivery to our
+                warehouses before the shipment actually arrives.</p>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">Why Is It Important?</h3>
+            <p>The ASN acts as a "virtual packing list" that allows our warehouse management systems (WM9/SCE11) to
+                prepare for your arrival. Without a correct ASN, our teams cannot verify inventory, which leads to
+                significant delays in unloading and payment processing.</p>
+
+            <div class="field-grid">
+                <div class="field-item"><strong>Pre-notification:</strong> Tells us exactly what items are coming and
+                    when.</div>
+                <div class="field-item"><strong>Efficiency:</strong> Allows for rapid "scan-to-verify" receiving.</div>
+                <div class="field-item"><strong>Accuracy:</strong> Prevents discrepancies between what was ordered and
+                    what was shipped.</div>
+                <div class="field-item"><strong>Tracking:</strong> Links the physical shipment to the Purchase Order
+                    (PO) and Log ID.</div>
+            </div>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">Key Components of a Chalhoub ASN</h3>
+            <p>A complete ASN must include:</p>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">PO Reference</span>
+                    The original Purchase Order number being fulfilled.
+                </li>
+                <li>
+                    <span class="step-title">Itemized SKUs</span>
+                    A breakdown of every product and the exact quantity shipped.
+                </li>
+                <li>
+                    <span class="step-title">Logistics Metadata</span>
+                    The <strong>Log ID</strong> (critical for tracking), Invoice Number, and Date.
+                </li>
+                <li>
+                    <span class="step-title">Packaging Specs</span>
+                    The total number of Cartons (UDF4) and Pallets (UDF5).
+                </li>
+            </ul>
+
+            <div class="info-note">
+                <strong>Pro Tip:</strong> Always double-check your Log ID. This is the primary reference used by our
+                inbound teams to locate and process your shipment upon arrival.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
+

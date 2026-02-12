@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WM9 Guide | Vendor ASN Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portal Home</a>
+
+        <div class="content-card">
+            <h2>📦 Manual ASN Creation in WM9</h2>
+            <p style="margin-bottom: 2rem;">Follow these steps to manually create an Advanced Shipping Notice within the
+                WM9 system.</p>
+
+            <div class="info-note" style="background-color: #fee2e2; border-left-color: #ef4444; color: #991b1b;">
+                <strong>🚨 Efficiency Alert:</strong> If your shipment contains a high volume of items and lines, do
+                <strong>NOT</strong> process it manually. Use the <a href="rpa.html"
+                    style="color: #b91c1c; font-weight: bold;">RPA Automation</a> instead to save time and ensure data
+                accuracy.
+            </div>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">1. Initial PO Setup</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Warehouse Selection</span>
+                    Select the Warehouse (WH) facility from the <strong>Facility</strong> drop-down menu relative to the
+                    specific shipment you are working on.
+                </li>
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">Locate Purchase Order (PO)</span>
+                        On the left-hand sidebar, click the <strong>+</strong> sign next to the <strong>Inbound</strong>
+                        section and select <strong>PO</strong>.
+                    </div>
+                    <div class="step-image" tabindex="0">
+                        <img src="WM911.jpg" alt="WM9 Inbound Plus Sign">
+                    </div>
+                </li>
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">PO Search</span>
+                        Paste the PO number between two percent signs (e.g., <code
+                            style="background: #eee; padding: 2px 4px;">%12345%</code>) and hit <strong>Enter</strong>.
+                        This
+                        will generate the required <strong>Owner Code</strong>.
+                    </div>
+                    <div class="step-image small" tabindex="0">
+                        <img src="WM92.jpg" alt="WM9 PO Search Reference">
+                    </div>
+                </li>
+            </ul>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">2. Creating the New ASN</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Initialize Record</span>
+                    Click <strong>ASN/Receipt</strong> on the left-hand sidebar, then click the
+                    <strong>New</strong> button on the top bar.
+                </li>
+                <li>
+                    <span class="step-title">Header Information</span>
+                    Paste the <strong>Owner Code</strong> generated in Step 1 into the correct section. Set the
+                    <strong>Document Receipt Date</strong> to today's date.
+                </li>
+                <li>
+                    <span class="step-title">General Tab</span>
+                    Fill in the <strong>Invoice Number</strong>, <strong>Invoice Date</strong>, and <strong>Number of
+                        Cartons (UDF4)</strong> or <strong>Pallets (UDF5)</strong>.
+                </li>
+                <li>
+                    <span class="step-title">Carrier Tab</span>
+                    Enter your specific <strong>LOG ID</strong> in the <strong>Remarks</strong> section.
+                </li>
+                <li>
+                    <span class="step-title">Loading Tab</span>
+                    Enter the following mandatory details:
+                    <ul style="margin-top: 0.5rem; list-style: disc; padding-left: 1.5rem; font-size: 0.9rem;">
+                        <li><strong>Traffic File Number:</strong> Paste the LOG ID.</li>
+                        <li><strong>Terms of Delivery:</strong> Add the INCO Terms.</li>
+                        <li><strong>Transportation Mode:</strong> Select applicable mode (Either Land, Air or Sea).</li>
+                        <li><strong>Country Details:</strong> Add Country of Origin and Destination.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="step-title">Save Header</span>
+                    Click <strong>Save</strong> from the top bar. Keep the PO number copied for the next step.
+                </li>
+            </ul>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">3. Populating from PO</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Action Menu</span>
+                    Click on <strong>Action</strong> from the top bar and select <strong>Populate from PO</strong>.
+                </li>
+                <li>
+                    <span class="step-title">Selection</span>
+                    Add <code style="background: #eee; padding: 2px 4px;">%(PO)%</code> in the PO section, hit enter,
+                    then tick the checkbox on the left-hand side of the PO and click <strong>OK</strong>.
+                </li>
+            </ul>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">4. Validation & Discrepancies</h3>
+            <div class="field-grid" style="grid-template-columns: 1fr;">
+                <div class="field-item" style="align-items: flex-start; margin-bottom: 1rem;">
+                    <div>
+                        <strong>Quantity Mismatch:</strong> If the PO quantity does not match the invoice:
+                        <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.85rem;">
+                            <li>Export the data to Excel.</li>
+                            <li>Perform a <strong>VLOOKUP</strong> between Invoice SKUs and PO SKUs.</li>
+                            <li>If PO QTY > Invoice: Adjust the quantity down to match.</li>
+                            <li>If PO QTY < Invoice: Stop processing and <strong>send an email to the respective
+                                    BU</strong> for clarification.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="field-item" style="align-items: flex-start;">
+                    <div>
+                        <strong>Value Mismatch (Pricing):</strong>
+                        <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.85rem;">
+                            <li><strong>Saudi Arabia:</strong> You are authorized to manipulate prices to match the
+                                Invoice value exactly.</li>
+                            <li><strong>All Other Countries:</strong> You are NOT authorized to change prices.
+                                <strong>Send an email to the BU</strong> regarding the discrepancy before proceeding.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">5. Post-Creation Requirements</h3>
+            <div class="info-note" style="background-color: #f0f9ff; border-left-color: #0ea5e9; color: #0369a1;">
+                <strong>📍 Jafza & DIP Warehouse Note:</strong> After creating the ASN, if the warehouse is
+                <strong>Jafza</strong> or <strong>DIP</strong>, you <strong>MUST</strong> create an appointment
+                immediately. These warehouses cannot receive any shipment without a pre-scheduled appointment linked to
+                the ASN.
+                <br><br>
+                <a href="appointments.html" style="font-weight: bold; color: #0284c7;">Go to Appointment Creation Guide
+                    →</a>
+            </div>
+
+            <a href="http://excprdapp01d.mac-erp.net/wmprd/wms/wmsapp.ctrl?S%7CG%7CloginRequest=20501"
+                class="cta-button">Redirect to WM9 Log in</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
+

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments Guide | Vendor ASN Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portal Home</a>
+
+        <div class="content-card">
+            <h2>📅 Appointment Creation Guide</h2>
+            <p style="margin-bottom: 2rem;">Appointments are mandatory for Jafza and DIP warehouses. The process varies
+                depending on whether you are using <strong>WM9</strong> or <strong>SCE11</strong>.</p>
+
+            <div class="info-note" style="background-color: #f0f9ff; border-left-color: #0ea5e9; color: #0369a1;">
+                <strong>📍 Quick Routing:</strong>
+                <ul style="margin-top: 0.5rem; list-style: disc; padding-left: 1.5rem;">
+                    <li><strong>JAFZA Shipments:</strong> Use the <strong>WM9</strong> system.</li>
+                    <li><strong>DIP Shipments:</strong> Use the <strong>SCE11</strong> system.</li>
+                </ul>
+            </div>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">1. JAFZA Appointments (WM9)</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Navigation</span>
+                    On the left-hand sidebar, click the <strong>+</strong> sign next to <strong>Appointment</strong>,
+                    select <strong>Appointment List</strong>, and then click the <strong>New</strong> button on the top
+                    bar.
+                </li>
+                <li>
+                    <span class="step-title">Initial Logistics</span>
+                    Fill in the <strong>Traffic File Number</strong> (LOG ID), <strong>Transportation Mode</strong>, and
+                    <strong>Terms</strong> (INCO Term).
+                </li>
+                <li>
+                    <span class="step-title">Carrier Selection</span>
+                    Identify the carrier specified in Logitude (Partner section next to Freight Forwarder).
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                        Search for the carrier using percent signs. <br>
+                        <strong>Example:</strong> For <em>Enkay Express</em>, search <code>%ENKAY%</code>, hit enter,
+                        and tick the checkbox next to the correct entry.
+                    </p>
+                </li>
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">Scheduling Details</span>
+                        <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem; list-style: circle;">
+                            <li><strong>Start Date:</strong> Use the calendar icon to select today's date.</li>
+                            <li><strong>Door:</strong> Enter <code>DOOR1</code>, <code>DOOR2</code>, <code>DOOR3</code>,
+                                or
+                                <code>DOOR4</code> (Must be capitalized).
+                            </li>
+                            <li><strong>Trailer Type:</strong> Always select <code>Vehicle under 3T</code>.</li>
+                        </ul>
+                    </div>
+                    <div class="step-image small" tabindex="0">
+                        <img src="calend.jpg" alt="Calendar Icon Selection">
+                    </div>
+                </li>
+                <li id="wm9-logic">
+                    <span class="step-title">Terms & Insurance (INCO Logic)</span>
+                    <div class="has-image" style="align-items: flex-start;">
+                        <div class="step-content">
+                            <ul style="margin-top: 0; font-size: 0.85rem;">
+                                <li><strong>If EXW or FOB:</strong> Set Insurance, Insurance Coverage, and Custom Duty
+                                    to options containing <strong>Consignee</strong>.</li>
+                                <li><strong>Other Terms:</strong> Set options to <strong>Shipper</strong>. For Custom
+                                    Duty, choose <strong>To be Paid by shipper</strong>.</li>
+                            </ul>
+                        </div>
+                        <div class="step-image small" tabindex="0">
+                            <img src="inco.jpg" alt="Inco Terms Logic Reference">
+                        </div>
+                    </div>
+                </li>
+                <li class="has-image">
+                    <div class="step-content">
+                        <span class="step-title">Collection Address</span>
+                        Always set the collection slot to:
+                        <br><code>Main WH, Plot No. S10608A, Tel. No:04-816-8000</code>.
+                    </div>
+                    <div class="step-image" tabindex="0">
+                        <img src="mainwh.jpg" alt="Main Warehouse Address Reference">
+                    </div>
+                </li>
+                <li>
+                    <span class="step-title">Linking the ASN</span>
+                    Click <strong>Save</strong>. Once saved, an <strong>Add</strong> button will appear at the bottom.
+                    Click it, paste your <strong>ASN Number</strong>, hit enter, tick the correct ASN, and click
+                    <strong>OK</strong>.
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;"><em>Note: Some
+                            shipments require "Appointment Only" without linking an ASN. Follow all steps but skip this
+                            final link.</em></p>
+                </li>
+            </ul>
+
+            <h3 style="color: var(--primary-blue); margin: 3rem 0 1rem;">2. DIP Appointments (SCE11)</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Environment Setup</span>
+                    Click the <strong>INFOR_ENTERPRISE</strong> dropdown at the very top and select
+                    <strong>DIP</strong>.
+                </li>
+                <li>
+                    <span class="step-title">Navigation</span>
+                    On the left menu, go to <strong>WMS</strong> -> <strong>Appointment</strong> -> <strong>Appointment
+                        List</strong> and click <strong>New</strong>.
+                </li>
+                <li>
+                    <span class="step-title">Core Fields</span>
+                    Fill out the <strong>Traffic File Number</strong>, <strong>Transportation Mode</strong>, and
+                    <strong>INCO Terms</strong>.
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem;"><em>The <a href="#wm9-logic"
+                                style="color: var(--primary-blue); font-weight: 600; text-decoration: underline;">Insurance
+                                and Collection logic (Main Warehouse)</a> is identical to the WM9 process described
+                            above.</em></p>
+                </li>
+                <li>
+                    <span class="step-title">Slot & Timing</span>
+                    Fill out <strong>DOOR</strong>, <strong>Carrier</strong>, and <strong>Trailer Type</strong> (Vehicle
+                    under 3T).
+                    <div class="info-note"
+                        style="background-color: #fffbeb; border-left-color: #f59e0b; color: #92400e; padding: 0.5rem 1rem;">
+                        <strong>⏱️ Timing Rule:</strong> The End Time must be at least <strong>10 minutes</strong> after
+                        the Start Time (Ex: 4:00 PM Start -> 4:10 PM End).
+                    </div>
+                </li>
+                <li>
+                    <span class="step-title">Save & Link</span>
+                    Click <strong>Save</strong>, then use the <strong>Add</strong> button appearing at the bottom to
+                    link your ASN.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
+
