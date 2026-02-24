@@ -97,24 +97,9 @@
                                 Cartons (UDF4)</strong> or <strong>Pallets (UDF5)</strong>.
                         </li>
                         <li>
-                            <span class="step-title">Carrier Tab</span>
-                            Enter your specific <strong>LOG ID</strong> in the <strong>Remarks</strong> section.
-                        </li>
-                        <li>
-                            <span class="step-title">Loading Tab</span>
-                            Enter the following mandatory details:
-                            <ul style="margin-top: 0.5rem; list-style: disc; padding-left: 1.5rem; font-size: 0.9rem;">
-                                <li><strong>Traffic File Number:</strong> Paste the LOG ID.</li>
-                                <li><strong>Terms of Delivery:</strong> Add the INCO Terms.</li>
-                                <li><strong>Transportation Mode:</strong> Select applicable mode (Either Land, Air or
-                                    Sea).</li>
-                                <li><strong>Country Details:</strong> Add Country of Origin and Destination.</li>
-                            </ul>
-                        </li>
-                        <li>
                             <span class="step-title">Save Header</span>
                             Click <strong>Save</strong> from the top bar. This initializes the document so you can
-                            populate it. Keep the PO number copied for the next step.
+                            proceed to pull lines from the PO.
                         </li>
                     </ul>
                 </div>
@@ -122,14 +107,14 @@
                     <div class="step-image" tabindex="0">
                         <img src="WM94.jpg" alt="WM9 Data Entry Reference">
                     </div>
-                    <p
-                        style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.75rem; text-align: center; font-style: italic;">
-                        the highlighted fields are required to be edited
-                    </p>
                 </div>
             </div>
 
-            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">3. Populating from PO</h3>
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">3. Populating & Validating PO</h3>
+            <div class="info-note" style="margin-bottom: 1.5rem;">
+                <strong>💡 Verification Note:</strong> Right after the General Tab and Save, you must populate the PO to
+                confirm if the <strong>quantity</strong> and <strong>value</strong> match your invoice.
+            </div>
             <ul class="step-list">
                 <li>
                     <span class="step-title">Action Menu</span>
@@ -142,8 +127,7 @@
                 </li>
             </ul>
 
-            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">4. Validation & Discrepancies</h3>
-            <div class="field-grid" style="grid-template-columns: 1fr;">
+            <div class="field-grid" style="grid-template-columns: 1fr; margin-top: 1.5rem;">
                 <div class="field-item" style="align-items: flex-start; margin-bottom: 1rem;">
                     <div>
                         <strong>Quantity Mismatch:</strong> If the PO quantity does not match the invoice:
@@ -169,6 +153,25 @@
                     </div>
                 </div>
             </div>
+
+            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">4. Completing ASN Details</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-title">Carrier Tab</span>
+                    Enter your specific <strong>LOG ID</strong> in the <strong>Remarks</strong> section.
+                </li>
+                <li>
+                    <span class="step-title">Loading Tab</span>
+                    Enter the following mandatory details:
+                    <ul style="margin-top: 0.5rem; list-style: disc; padding-left: 1.5rem; font-size: 0.9rem;">
+                        <li><strong>Traffic File Number:</strong> Paste the LOG ID.</li>
+                        <li><strong>Terms of Delivery:</strong> Add the INCO Terms.</li>
+                        <li><strong>Transportation Mode:</strong> Select applicable mode (Either Land, Air or
+                            Sea).</li>
+                        <li><strong>Country Details:</strong> Add Country of Origin and Destination.</li>
+                    </ul>
+                </li>
+            </ul>
 
             <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">5. Final Confirmation</h3>
             <div class="info-note" style="background-color: #f0fdf4; border-left-color: #22c55e; color: #166534;">
