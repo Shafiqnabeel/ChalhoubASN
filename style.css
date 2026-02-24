@@ -418,6 +418,7 @@ h3 {
     width: 100%;
     height: auto;
     display: block;
+    border: 1px solid var(--primary-blue);
 }
 
 @media (max-width: 768px) {
