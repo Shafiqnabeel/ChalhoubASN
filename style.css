@@ -423,15 +423,62 @@ h3 {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 1.5rem 5%;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        padding: 2.5rem 5%;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .content-card {
+        padding: 1.5rem;
+    }
+
     .has-image {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
+        margin-bottom: 2rem !important;
     }
 
     .step-image {
-        flex: 1;
+        flex: none;
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .step-list li {
+        padding-left: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .step-list li::before {
+        width: 1.75rem;
+        height: 1.75rem;
+        line-height: 1.75rem;
+        font-size: 0.8rem;
+    }
+
+    .field-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .definition-box {
+        padding: 1.25rem;
     }
 }
 
