@@ -277,10 +277,8 @@ h3 {
 
 .step-image {
     flex: 0 0 300px;
-    border: 3px solid var(--primary-blue);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     background: white;
     cursor: zoom-in;
@@ -414,10 +412,14 @@ h3 {
     cursor: pointer;
 }
 
-.step-image img {
+.step-image img,
+.content-card img:not(.logo-img) {
     width: 100%;
     height: auto;
     display: block;
+    border: 3px solid var(--primary-blue);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
