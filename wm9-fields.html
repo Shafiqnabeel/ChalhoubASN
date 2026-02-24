@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WM9 Mandatory Fields | ASN Creation Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
+            <div class="header-text">
+                <div class="logo-text">CHALHOUB GROUP</div>
+                <div class="header-tagline">ASN Creation Guide</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="wm9.html" class="back-link">← Back to WM9 Guide</a>
+
+        <div class="content-card">
+            <h2>📋 WM9 Mandatory Fields Reference</h2>
+            <p style="margin-bottom: 3rem;">This visual guide highlights the exact fields required for each tab in the
+                WM9 system to ensure a successful ASN creation.</p>
+
+            <!-- 1. ASN/Receipt Section -->
+            <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">1. ASN/Receipts Tab</h3>
+            <div class="step-list">
+                <div class="has-image"
+                    style="margin-bottom: 4rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: white;">
+                    <div class="step-content" style="padding: 2rem;">
+                        <span class="step-title" style="font-size: 1.2rem; color: var(--primary-blue);">Header
+                            Setup</span>
+                        <p style="margin-top: 1rem;">When creating a new record, ensure these header fields are correct:
+                        </p>
+                        <ul style="margin-top: 1rem; list-style: disc; padding-left: 1.5rem; color: #475569;">
+                            <li><strong>Owner:</strong> Enter the correct Owner Code.</li>
+                            <li><strong>Document Received Date:</strong> Enter the actual date of creation (today's
+                                date).</li>
+                        </ul>
+                    </div>
+                    <div class="step-image" tabindex="0"
+                        style="flex: 0 0 50%; min-width: 400px; border: none; border-left: 1px solid #e2e8f0; border-radius: 0;">
+                        <img src="ASN1.jpg" alt="ASN/Receipts tab mandatory fields">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. General Tab -->
+            <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">2. General Tab</h3>
+            <div class="step-list">
+                <div class="has-image"
+                    style="margin-bottom: 4rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: white;">
+                    <div class="step-content" style="padding: 2rem;">
+                        <span class="step-title" style="font-size: 1.2rem; color: var(--primary-blue);">Shipment
+                            Details</span>
+                        <p style="margin-top: 1rem;">Fill in the following details in the General section:</p>
+                        <ul style="margin-top: 1rem; list-style: disc; padding-left: 1.5rem; color: #475569;">
+                            <li><strong>Invoice Number:</strong> The official invoice identifier.</li>
+                            <li><strong>Date of Invoice:</strong> The date as per the actual invoice.</li>
+                            <li><strong>Number of Boxes:</strong> Use <strong>UDF 4</strong> for Cartons or <strong>UDF
+                                    5</strong> for Pallets. (Fill either one as applicable).</li>
+                        </ul>
+                    </div>
+                    <div class="step-image" tabindex="0"
+                        style="flex: 0 0 50%; min-width: 400px; border: none; border-left: 1px solid #e2e8f0; border-radius: 0;">
+                        <img src="ASN2.jpg" alt="General tab mandatory fields">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Carrier Tab -->
+            <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">3. Carrier Tab</h3>
+            <div class="step-list">
+                <div class="has-image"
+                    style="margin-bottom: 4rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: white;">
+                    <div class="step-content" style="padding: 2rem;">
+                        <span class="step-title" style="font-size: 1.2rem; color: var(--primary-blue);">Logistics
+                            Traceability</span>
+                        <p style="margin-top: 1rem;">The Carrier tab tracks the reference ID for the shipment:</p>
+                        <ul style="margin-top: 1rem; list-style: disc; padding-left: 1.5rem; color: #475569;">
+                            <li><strong>Remarks:</strong> Enter the <strong>LOG ID</strong> being worked on currently.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="step-image" tabindex="0"
+                        style="flex: 0 0 50%; min-width: 400px; border: none; border-left: 1px solid #e2e8f0; border-radius: 0;">
+                        <img src="ASN3.jpg" alt="Carrier tab mandatory fields">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Loading Tab -->
+            <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">4. Loading Tab</h3>
+            <div class="step-list">
+                <div class="has-image"
+                    style="margin-bottom: 4rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: white;">
+                    <div class="step-content" style="padding: 2rem;">
+                        <span class="step-title" style="font-size: 1.2rem; color: var(--primary-blue);">Transport
+                            Definition</span>
+                        <p style="margin-top: 1rem;">The final tab defines the physical transport details:</p>
+                        <ul style="margin-top: 1rem; list-style: disc; padding-left: 1.5rem; color: #475569;">
+                            <li><strong>Traffic File Number:</strong> Paste the <strong>LOG ID</strong>.</li>
+                            <li><strong>Transportation Mode:</strong> Land, Air, or Sea.</li>
+                            <li><strong>Terms of Delivery:</strong> Respective INCO terms.</li>
+                            <li><strong>Country of Destination & Origin:</strong> Correct regional codes.</li>
+                        </ul>
+                    </div>
+                    <div class="step-image" tabindex="0"
+                        style="flex: 0 0 50%; min-width: 400px; border: none; border-left: 1px solid #e2e8f0; border-radius: 0;">
+                        <img src="ASN4.jpg" alt="Loading tab mandatory fields">
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-note"
+                style="background-color: #f0fdf4; border-left-color: #22c55e; color: #166534; margin-top: 2rem; text-align: center;">
+                <strong>✅ Validation Ready:</strong> Once these 4 sections are completed in order, your WM9 ASN will be
+                ready for validation.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">CHALHOUB GROUP</p>
+        <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7; text-transform: uppercase;">Since 1955</p>
+        <div class="signature">By Shafiq Nabeel</div>
+    </footer>
+
+</body>
+
+</html>
