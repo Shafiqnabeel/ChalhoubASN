@@ -16,7 +16,7 @@
             <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
             <div class="header-text">
                 <div class="logo-text">CHALHOUB GROUP</div>
-                <div class="header-tagline">ASN Creation</div>
+                <div class="header-tagline">ASN Creation Guide</div>
             </div>
         </div>
     </header>
@@ -32,8 +32,18 @@
             <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">1. System Entry & Header</h3>
             <ul class="step-list">
                 <li>
+                    <span class="step-title">Access the System</span>
+                    <p style="margin-bottom: 1rem;">Click the button below to log in to the production environment:</p>
+                    <a href="https://inforosprdapp.chalhoub.org/infor/bb61c89e-13d9-405b-bca5-5af6bddb1023"
+                        target="_blank" class="cta-button"
+                        style="background-color: #0369a1; margin-bottom: 0.75rem; margin-top: 0;">SCE11 Log in</a>
+                    <p style="font-size: 0.8rem; color: #dc2626; font-style: italic; font-weight: 600;">Note: If errors
+                        keep appearing after logging in, please open the link in Incognito Mode to resolve the issue.
+                    </p>
+                </li>
+                <li>
                     <span class="step-title">Database Selection</span>
-                    Start by entering the correct Warehouse (WH) database: either <strong>DIP</strong> or
+                    Once logged in, ensure you enter the correct Warehouse (WH) database: either <strong>DIP</strong> or
                     <strong>MFC</strong>.
                 </li>
                 <li>
@@ -44,20 +54,15 @@
                     <span class="step-title">Initialize Record</span>
                     Once in the section, click <strong>New</strong> to start a new entry.
                 </li>
-                <li>
-                    <span class="step-title">Initial Section (Main Tab)</span>
-                    Fill out the following primary details:
-                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem; list-style: disc;">
-                        <li><strong>Owner Code:</strong> Enter the Owner Code (retrieved from the PO section as
-                            previously described).</li>
-                        <li><strong>Documents Received Date:</strong> Set this to today's date.</li>
-                        <li><strong>PO Number:</strong> Paste your PO number into the designated section.</li>
-                    </ul>
-                </li>
             </ul>
 
             <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">2. Detailed Configuration</h3>
             <ul class="step-list">
+                <li>
+                    <span class="step-title">Initial Setup (ASN/Receipt Section)</span>
+                    The first action after initialization is to add the <strong>PO Number</strong> and the
+                    <strong>Documents Received Date</strong> (This should be the actual date of creation).
+                </li>
                 <li>
                     <span class="step-title">General Tab</span>
                     Navigate to the <strong>General Tab</strong> and paste the invoice number under the <strong>Supplier
@@ -94,6 +99,14 @@
                 <strong>✅ Final Step:</strong> Click <strong>Save</strong> from the top bar. You have now successfully
                 created an ASN manually in SCE11.
             </div>
+
+            <!-- Mandatory Fields Reference Link -->
+            <div style="margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem;">
+                <a href="sce11-fields.html" class="cta-button"
+                    style="background-color: var(--accent-blue); display: inline-flex; align-items: center; gap: 0.75rem;">
+                    <span>📋</span> View SCE11 Mandatory Fields Reference
+                </a>
+            </div>
         </div>
     </div>
 
@@ -106,4 +119,3 @@
 </body>
 
 </html>
-

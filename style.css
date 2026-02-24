@@ -177,6 +177,13 @@ header {
     border-radius: var(--border-radius);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     animation: fadeIn 0.5s ease;
+    counter-reset: step-counter;
+    /* Initialize counter for the whole card */
+}
+
+/* Sections reset the step counter for their sub-steps */
+h3 {
+    counter-reset: step-counter;
 }
 
 .content-card h2 {
@@ -225,7 +232,7 @@ header {
 
 .step-list {
     list-style: none;
-    counter-reset: step-counter;
+    /* Counter reset removed to allow continuous numbering across multiple lists under the same h3 */
 }
 
 .step-list li {

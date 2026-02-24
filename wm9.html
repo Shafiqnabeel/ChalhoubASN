@@ -16,7 +16,7 @@
             <img src="CHALHOUB.png" alt="Chalhoub Logo" class="logo-img">
             <div class="header-text">
                 <div class="logo-text">CHALHOUB GROUP</div>
-                <div class="header-tagline">ASN Creation</div>
+                <div class="header-tagline">ASN Creation Guide</div>
             </div>
         </div>
     </header>
@@ -49,7 +49,7 @@
                         On the left-hand sidebar, click the <strong>+</strong> sign next to the <strong>Inbound</strong>
                         section and select <strong>PO</strong>.
                     </div>
-                    <div class="step-image" tabindex="0">
+                    <div class="step-image small" tabindex="0">
                         <img src="WM911.jpg" alt="WM9 Inbound Plus Sign">
                     </div>
                 </li>
@@ -67,42 +67,57 @@
                 </li>
             </ul>
 
-            <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">2. Creating the New ASN</h3>
-            <ul class="step-list">
-                <li>
-                    <span class="step-title">Initialize Record</span>
-                    Click <strong>ASN/Receipt</strong> on the left-hand sidebar, then click the
-                    <strong>New</strong> button on the top bar.
-                </li>
-                <li>
-                    <span class="step-title">Header Information</span>
-                    Paste the <strong>Owner Code</strong> generated in Step 1 into the correct section. Set the
-                    <strong>Document Receipt Date</strong> to today's date.
-                </li>
-                <li>
-                    <span class="step-title">General Tab</span>
-                    Fill in the <strong>Invoice Number</strong>, <strong>Invoice Date</strong>, and <strong>Number of
-                        Cartons (UDF4)</strong> or <strong>Pallets (UDF5)</strong>.
-                </li>
-                <li>
-                    <span class="step-title">Carrier Tab</span>
-                    Enter your specific <strong>LOG ID</strong> in the <strong>Remarks</strong> section.
-                </li>
-                <li>
-                    <span class="step-title">Loading Tab</span>
-                    Enter the following mandatory details:
-                    <ul style="margin-top: 0.5rem; list-style: disc; padding-left: 1.5rem; font-size: 0.9rem;">
-                        <li><strong>Traffic File Number:</strong> Paste the LOG ID.</li>
-                        <li><strong>Terms of Delivery:</strong> Add the INCO Terms.</li>
-                        <li><strong>Transportation Mode:</strong> Select applicable mode (Either Land, Air or Sea).</li>
-                        <li><strong>Country Details:</strong> Add Country of Origin and Destination.</li>
+            <div class="has-image" style="align-items: flex-start; margin-top: 2rem;">
+                <div class="step-content">
+                    <h3 style="color: var(--primary-blue); margin: 0 0 1.5rem;">2. Creating the New ASN</h3>
+                    <ul class="step-list">
+                        <li>
+                            <span class="step-title">Initialize Record</span>
+                            Click <strong>ASN/Receipt</strong> on the left-hand sidebar, then click the
+                            <strong>New</strong> button on the top bar.
+                        </li>
+                        <li>
+                            <span class="step-title">Header Information</span>
+                            Paste the <strong>Owner Code</strong> generated in Step 1 into the correct section. Set the
+                            <strong>Document Receipt Date</strong> to today's date.
+                        </li>
+                        <li>
+                            <span class="step-title">General Tab</span>
+                            Fill in the <strong>Invoice Number</strong>, <strong>Invoice Date</strong>, and
+                            <strong>Number of
+                                Cartons (UDF4)</strong> or <strong>Pallets (UDF5)</strong>.
+                        </li>
+                        <li>
+                            <span class="step-title">Carrier Tab</span>
+                            Enter your specific <strong>LOG ID</strong> in the <strong>Remarks</strong> section.
+                        </li>
+                        <li>
+                            <span class="step-title">Loading Tab</span>
+                            Enter the following mandatory details:
+                            <ul style="margin-top: 0.5rem; list-style: disc; padding-left: 1.5rem; font-size: 0.9rem;">
+                                <li><strong>Traffic File Number:</strong> Paste the LOG ID.</li>
+                                <li><strong>Terms of Delivery:</strong> Add the INCO Terms.</li>
+                                <li><strong>Transportation Mode:</strong> Select applicable mode (Either Land, Air or
+                                    Sea).</li>
+                                <li><strong>Country Details:</strong> Add Country of Origin and Destination.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="step-title">Save Header</span>
+                            Click <strong>Save</strong> from the top bar. Keep the PO number copied for the next step.
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <span class="step-title">Save Header</span>
-                    Click <strong>Save</strong> from the top bar. Keep the PO number copied for the next step.
-                </li>
-            </ul>
+                </div>
+                <div style="flex: 0 0 350px; margin-top: 1rem;">
+                    <div class="step-image" tabindex="0">
+                        <img src="WM94.jpg" alt="WM9 Data Entry Reference">
+                    </div>
+                    <p
+                        style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.75rem; text-align: center; font-style: italic;">
+                        the highlighted fields are required to be edited
+                    </p>
+                </div>
+            </div>
 
             <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem;">3. Populating from PO</h3>
             <ul class="step-list">
@@ -170,4 +185,3 @@
 </body>
 
 </html>
-
